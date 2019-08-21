@@ -5,21 +5,22 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
-    require "escpos"
+    
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
-require "escpos"
-  @printerp = Escpos::Printer.new
-  @printerp << "Some text"
+    require 'socket'
 
-  @printerp.to_escpos 
-  @printerp.to_base64
-  @printerp.cut!
+    
+    client = TCPSocket.new '192.168.1.33', 9100
 
-  puts "hello"
+    client.write "recep"
+    client.write "\n\n\n\n\n\n\n\n"
+
+    client.write "\x1D\x56\x01"
+
 
   end
 

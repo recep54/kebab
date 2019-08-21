@@ -25,14 +25,3 @@
 
 <%= link_to 'New Order', new_order_path %>
 
-
-
-<% @printer = Escpos::Printer.new %>
-<% @printer << "Some text"%>
-
-<hr/>
-<%= @printer.to_escpos %>
-<hr/>
-<%= @printer.to_base64  %>
-<hr/>
-<%= @printer.cut! %>
