@@ -25,3 +25,48 @@
 
 <%= link_to 'New Order', new_order_path %>
 
+<%= form_for :anything, url: "/print", method: :get do |f| %>
+
+<div class="form-group">
+    <label>Please enter the name of a movie to get more details on it:</label><br>
+    <%= f.text_field :name %>
+    <div class= "kebab">
+    <p>kebab</p>
+    <%= f.check_box :paid, class: "bouton" %>
+    </div>
+    <div class= "kebab">
+    <p class= "wr">poulet</p>
+    <%= f.check_box :poulet, class: "bouton", id: "jd" %>
+    </div>
+    <div class= "kebab">
+    <p>kofte</p>
+    <%= f.check_box :kofte, class: "bouton", checked: true %>kebab
+    </div>
+    <div class= "sosis">
+    <p>sosos</p>
+    
+    </div>
+    <%= f.check_box :kebab , checked: true%>
+     <%= f.label :kebab, "Subscribe" %>
+
+    <%= f.button %>
+    <%= f.submit value="Send"%>
+</div>
+
+<% end %>
+
+<label class="checkbox-inline">
+  <input type="checkbox" checked data-toggle="toggle"> First
+</label>
+<label class="checkbox-inline">
+  <input type="checkbox" data-toggle="toggle"> Second
+</label>
+<label class="checkbox-inline">
+  <input type="checkbox" data-toggle="toggle"> Third
+</label>
+
+<button type="button" class="btn btn-primary">Primary</button>
+
+<input id="accept" name="accept" type="checkbox" value="1" />
+
+<input id="rock" name="rock" type="checkbox" value="rock music" />

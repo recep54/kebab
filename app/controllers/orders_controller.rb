@@ -20,7 +20,11 @@ class OrdersController < ApplicationController
     client.write "\n\n\n\n\n\n\n\n"
 
     client.write "\x1D\x56\x01"
+    client.close
 
+  end
+
+  def print
 
   end
 

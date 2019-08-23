@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+
+.bouton{
+	background-color: red;
+	height: 100px;
+	width: 100%;
+}
+
+.kebab{
+	background-color: red;
+	border: solid 1px black;
+	color: blue;
+	text-align: center;
+	width: 25%;
+}
+
+.wr{
+	font-size: 20px;
+	background-color: yellow;
+	height: 100%;
+}
