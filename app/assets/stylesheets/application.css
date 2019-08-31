@@ -10,27 +10,75 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap3-switch
  *= require_tree .
  *= require_self
+  *= require bootstrap3-switch
  */
 
 
 .bouton{
 	background-color: red;
-	height: 100px;
+	height: 80px;
 	width: 100%;
+	background-color: red;
+	border: solid 1px black;
+	text-align: center;
+	
+}
+
+.bouton1{
+	background-color: red;
+	height: 80px;
+	width: 50%;
+	background-color: red;
+	border: solid 1px black;
+
+	display: flex;
+	
 }
 
 .kebab{
-	background-color: red;
+	font-size: 2em !important;
+	width: 20%;
+	/*margin: 15px;*/
 	border: solid 1px black;
-	color: blue;
-	text-align: center;
-	width: 25%;
+
 }
 
-.wr{
-	font-size: 20px;
-	background-color: yellow;
-	height: 100%;
+h4{
+	text-align: center;
+}
+
+
+.midlle
+{
+    display: flex;
+    /*justify-content: center;*/
+    
+}
+
+.li{
+	background-color: #F9DC5C ;
+}
+
+.lv{
+	background-color: #F4989C ;
+}
+
+.lc{
+	background-color: #9381FF ;
+}
+
+.ls{
+	background-color: #CAD2C5 ;
+}
+
+body{
+	background-color: #F7F7F2 ;
+}
+
+h1{
+	font-size: 100px;
+	text-align: center;
 }

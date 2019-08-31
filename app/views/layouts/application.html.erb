@@ -11,6 +11,13 @@
 
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% content_for :head do %>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('input:checkbox').bootstrapSwitch();
+  });
+  </script>
+<% end %>
   </head>
 
   <body>

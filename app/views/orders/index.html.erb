@@ -1,72 +1,266 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Orders</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 
-<%= link_to 'New Order', new_order_path %>
+
 
 <%= form_for :anything, url: "/print", method: :get do |f| %>
 
-<div class="form-group">
-    <label>Please enter the name of a movie to get more details on it:</label><br>
-    <%= f.text_field :name %>
-    <div class= "kebab">
-    <p>kebab</p>
-    <%= f.check_box :paid, class: "bouton" %>
-    </div>
-    <div class= "kebab">
-    <p class= "wr">poulet</p>
-    <%= f.check_box :poulet, class: "bouton", id: "jd" %>
-    </div>
-    <div class= "kebab">
-    <p>kofte</p>
-    <%= f.check_box :kofte, class: "bouton", checked: true %>kebab
-    </div>
-    <div class= "sosis">
-    <p>sosos</p>
+<div >
     
-    </div>
-    <%= f.check_box :kebab , checked: true%>
-     <%= f.label :kebab, "Subscribe" %>
+    <div class="midlle li">
 
-    <%= f.button %>
-    <%= f.submit value="Send"%>
+        <div class= "kebab">
+          <h4>Pain</h4>
+          <%= f.check_box :pain, class: "bouton", checked: true %>
+        </div>
+
+        <div class= "kebab">
+          <h4 class= "wr">durum</h4>
+          <%= f.check_box :durum, class: "bouton" %>
+        </div>
+    
+        <div class= "kebab">
+          <h4>assiete</h4>
+          <%= f.check_box :assiete, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4>P barque</h4>
+          <%= f.check_box :p_bar, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4>G barque</h4>
+          <%= f.check_box :g_bar, class: "bouton" %>
+        </div>
+        
+
+        </div>
+        <hr/>
+
+    <!-- <h4>Viande</h4> -->
+    <div class="midlle lv">
+
+        <div class= "kebab">
+          <h4>kebab</h4>
+          <%= f.check_box :kebab, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4 class= "wr">poulet</h4>
+          <%= f.check_box :poulet, class: "bouton" %>
+        </div>
+    
+        <div class= "kebab">
+          <h4>cheese</h4>
+          <%= f.check_box :cheese, class: "bouton" %>
+        </div>
+
+   
+
+        <div class= "kebab">
+          <h4>saucisse</h4>
+          <%= f.check_box :saucisse, class: "bouton" %>
+        </div>
+
+        
+        <div class= "kebab">
+          <h4>A steak</h4>
+          <%= f.check_box :a_steak, class: "bouton" %>
+        </div>
+
+        </div>
+
+        
+
+        <div class="midlle lv">
+      
+        <div class= "kebab">
+          <h4>A steak p</h4>
+          <%= f.check_box :a_steak_poulet, class: "bouton" %>
+        </div>
+
+        
+    
+        <div class= "kebab">
+          <h4>Belge</h4>
+          <%= f.check_box :belge, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4>kofte</h4>
+          <%= f.check_box :kofte, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4>Nuggets</h4>
+          <%= f.check_box :nuggets, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4>Patatos</h4>
+          <%= f.check_box :patatos, class: "bouton" %>
+        </div>
+
+      </div>
+
+
+    </div>
+    <hr/>
+
+<!-- <h4>Type</h4> -->
+
+
+        <!-- <h4>Crudité</h4> -->
+    
+    <div class="midlle lc">
+
+        <div class= "kebab">
+          <h4>Salade</h4>
+          <%= f.check_box :salade, class: "bouton", checked: true %>
+        </div>
+
+        <div class= "kebab">
+          <h4 class= "wr">tomate</h4>
+          <%= f.check_box :tomate, class: "bouton", checked: true %>
+        </div>
+    
+        <div class= "kebab">
+          <h4>oignon</h4>
+          <%= f.check_box :oignon, class: "bouton", checked: true %>
+        </div>
+
+        <div class= "kebab">
+          <h4>chou rouge</h4>
+          <%= f.check_box :rouge, class: "bouton" %>
+        </div>
+
+        </div>
+
+  <hr/>
+<!-- <h4>sauces</h4> -->
+    <div class="midlle ls">
+
+        <div class= "kebab">
+          <h4>blanche</h4>
+          <div class="midlle">
+          <%= f.check_box :blanche, class: "bouton1" %>
+          <%= f.check_box :blanchef, class: "bouton1" %>
+        </div>
+      </div>
+
+        <div class= "kebab">
+          <h4 class= "wr">ketchup</h4>
+          <%#= f.check_box :ketchup, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :ketchup, class: "bouton1" %>
+          <%= f.check_box :ketchupf, class: "bouton1" %>
+        </div>
+        </div>
+    
+        <div class= "kebab">
+          <h4>mayonnaise</h4>
+          <%#= f.check_box :mayonnaise, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :mayonnaise, class: "bouton1" %>
+          <%= f.check_box :mayonnaisef, class: "bouton1" %>
+        </div>
+        </div>
+
+        <div class= "kebab">
+          <h4>samourai</h4>
+
+          <%#= f.check_box :samourai, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :samourai, class: "bouton1" %>
+          <%= f.check_box :samouraif, class: "bouton1" %>
+        </div>
+        </div>
+        
+        </div>
+        <div class="midlle ls">
+
+        <div class= "kebab">
+          <h4 class= "wr">harissa</h4>
+          <%#= f.check_box :harissa, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :harissa, class: "bouton1" %>
+          <%= f.check_box :harissaf, class: "bouton1" %>
+        </div>
+        </div>
+    
+        <div class= "kebab">
+          <h4>Curry</h4>
+          <%#= f.check_box :Curry, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :Curry, class: "bouton1" %>
+          <%= f.check_box :Curryf, class: "bouton1" %>
+        </div>
+        </div>
+
+        <div class= "kebab">
+          <h4>algérienne</h4>
+          <%#= f.check_box :algérienne, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :algérienne, class: "bouton1" %>
+          <%= f.check_box :algériennef, class: "bouton1" %>
+        </div>
+        </div>
+
+        <div class= "kebab">
+          <h4 class= "wr">andalouse</h4>
+          <%#= f.check_box :andalouse, class: "bouton" %>
+          <div class="midlle">
+          <%= f.check_box :andalouse, class: "bouton1" %>
+          <%= f.check_box :andalousef, class: "bouton1" %>
+        </div>
+        </div>
+  
+    </div>
+    <hr/>
+    
+    <div class="midlle li">
+    
+
+    <div class= "kebab">
+          <h4>frite</h4>
+          <%= f.check_box :frite, class: "bouton" %>
+        </div>
+        
+        
+
+        <div class= "kebab">
+          <h4 class= "wr">boisson</h4>
+          <%= f.check_box :boisson, class: "bouton" %>
+        </div>
+        <div class= "kebab">
+          <h4 class= "wr">etudiant</h4>
+          <%= f.check_box :etu, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4>Gr frite</h4>
+          <%= f.check_box :g_frite, class: "bouton" %>
+        </div>
+
+        <div class= "kebab">
+          <h4 class= "wr">desert</h4>
+          <%= f.check_box :desert, class: "bouton" %>
+        </div>
+
+        
+    </div>
+    <hr>
+
+    <%= f.text_field :name, class: "form-control form-group mx-sm-3 mb-2", placeholder: "remarque" %>
+    <hr>
+
+<!-- <h4>menu</h4> -->
+
+
+    <%= f.submit value="imprimer", class: "btn btn-primary btn-lg btn-block"%>
 </div>
 
 <% end %>
 
-<label class="checkbox-inline">
-  <input type="checkbox" checked data-toggle="toggle"> First
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" data-toggle="toggle"> Second
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox" data-toggle="toggle"> Third
-</label>
 
-<button type="button" class="btn btn-primary">Primary</button>
-
-<input id="accept" name="accept" type="checkbox" value="1" />
-
-<input id="rock" name="rock" type="checkbox" value="rock music" />
+ 
